@@ -1,0 +1,39 @@
+{
+  "name": "typescript-express",
+  "version": "1.0.0",
+  "description": "bookstore",
+  "main": "src/index.ts",
+  "scripts": {
+    "stop": "docker-compose -f mongo/docker-compose.yaml down -v --rmi local",
+    "mongo": "docker-compose -f mongo/docker-compose.yaml up -d --build",
+    "premongo": "npm stop",
+    "watch": "tsc --watch",
+    "build": "tsc --build tsconfig.json",
+    "start": "ts-node-dev ./src/index.ts",
+    "serve": "ts-node ."
+  },
+  "keywords": [
+    "express",
+    "ts-express",
+    "typescript",
+    "ts-node-dev",
+    "ts-node",
+    "ts"
+  ],
+  "author": "daggerok",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "1.17.1",
+    "@types/express": "4.17.2",
+    "@types/mongodb": "3.3.14",
+    "@types/mongoose": "5.5.38",
+    "@types/node": "13.1.2",
+    "body-parser": "1.19.0",
+    "express": "4.17.1",
+    "forever": "1.0.0",
+    "mongoose": "5.8.4",
+    "ts-node": "8.5.4",
+    "ts-node-dev": "1.0.0-pre.44",
+    "typescript": "3.7.4"
+  }
+}
